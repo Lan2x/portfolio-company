@@ -1,6 +1,7 @@
 import { notFound } from "next/navigation";
 import { caseStudies } from "@/lib/data";
 import { Metadata } from "next";
+import { Button } from "@/components/ui/button";
 
 export async function generateStaticParams() {
   return caseStudies.map((c) => ({ slug: c.slug }));
@@ -31,6 +32,13 @@ export default function CaseStudyPage({
           {item.title}
         </h1>
         <p className="mt-4 text-muted-foreground">{item.summary}</p>
+        {item.url && (
+          <Button asChild className="mt-4" size="lg">
+            <a href={item.url} target="_blank" rel="noopener noreferrer">
+              Visit Project
+            </a>
+          </Button>
+        )}
         <div className="mt-8">
           <h2 className="font-medium">Results</h2>
           <ul className="mt-2 list-disc pl-6 text-sm text-muted-foreground">

@@ -17,17 +17,20 @@ export function StaggerContainer({
   children,
   once = true,
   amount = 0.35,
+  animate,
 }: React.PropsWithChildren<{
   className?: string;
   once?: boolean;
   amount?: number;
+  animate?: string;
 }>) {
   return (
     <motion.div
       className={cn(className)}
       initial="hidden"
-      whileInView="show"
-      viewport={{ once, amount }}
+      {...(animate
+        ? { animate }
+        : { whileInView: "show", viewport: { once, amount } })}
       variants={containerVariants}
     >
       {children}

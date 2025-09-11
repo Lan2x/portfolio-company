@@ -31,47 +31,75 @@ export const services = [
   },
 ] as const;
 
-export const caseStudies = [
+export type CaseStudy = {
+  slug: string;
+  title: string;
+  summary: string;
+  results: string[];
+  tags: string[];
+  url?: string;
+  image?: string;
+};
+
+export const caseStudies: CaseStudy[] = [
+  // {
+  //   slug: "ops-dashboard",
+  //   title: "Operations Dashboard",
+  //   summary:
+  //     "Unified real‑time insights across tools, improving decisions and reducing noise.",
+  //   results: [
+  //     "-35% time to insight",
+  //     "+25% team productivity",
+  //     "NPS +18 after launch",
+  //   ],
+  //   tags: ["Next.js", "Tailwind", "Analytics"],
+  // },
+  // {
+  //   slug: "ecommerce-modernization",
+  //   title: "E‑commerce Modernization",
+  //   summary:
+  //     "Replatformed storefront and admin, cutting page loads to under 1s globally.",
+  //   results: ["+22% conversion", "Core Web Vitals: all green"],
+  //   tags: ["Next.js", "Edge", "SEO"],
+  // },
   {
-    slug: "ops-dashboard",
-    title: "Operations Dashboard",
+    slug: "chia",
+    title: "Chia – Dental Clinic Reservation Management System",
     summary:
-      "Unified real‑time insights across tools, improving decisions and reducing noise.",
+      "A modern SaaS platform for dental clinics to manage reservations, patient records, and schedules efficiently.",
     results: [
-      "-35% time to insight",
-      "+25% team productivity",
-      "NPS +18 after launch",
+      "Automated appointment scheduling and reminders",
+      "Streamlined patient management and record-keeping",
+      "Multi-clinic support with secure cloud access",
+      "User-friendly dashboard for staff and administrators",
     ],
-    tags: ["Next.js", "Tailwind", "Analytics"],
-  },
-  {
-    slug: "ecommerce-modernization",
-    title: "E‑commerce Modernization",
-    summary:
-      "Replatformed storefront and admin, cutting page loads to under 1s globally.",
-    results: ["+22% conversion", "Core Web Vitals: all green"],
-    tags: ["Next.js", "Edge", "SEO"],
+    tags: ["SaaS", "Next.js", "Healthcare"],
+    url: "https://chia.ai.kr/",
+    image: "/work/chia.png",
   },
 ] as const;
 
 export const team = [
   {
-    name: "Avery Kim",
+    name: "Reynaldo Castante",
     role: "Founding Engineer",
     bio: "Full‑stack engineer focused on DX and shipping fast with quality.",
-    links: { linkedin: "#", github: "#" },
+    links: { linkedin: "#", github: "https://github.com/Lan2x" },
+    image: "/team/reynaldo.jpg",
   },
   {
-    name: "Riley Chen",
-    role: "Product Engineer",
-    bio: "Bridges product and engineering to deliver business outcomes.",
+    name: "Kizzelyn Cruz",
+    role: "Frontend Engineer",
+    bio: "Specializes in building beautiful, accessible user interfaces and seamless user experiences for modern web apps.",
     links: { linkedin: "#", github: "#" },
+    image: "/team/kizzelyn.png",
   },
   {
-    name: "Jordan Patel",
-    role: "Platform Engineer",
-    bio: "Loves performance, reliability, and clean abstractions.",
+    name: "Joveth Dela Cruz",
+    role: "Backend Engineer",
+    bio: "Expert in scalable backend systems, API design, and cloud infrastructure, ensuring reliability and performance.",
     links: { linkedin: "#", github: "#" },
+    image: "/team/joveth.png",
   },
 ] as const;
 

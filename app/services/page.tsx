@@ -6,6 +6,7 @@ import {
   CardDescription,
 } from "@/components/ui/card";
 import { PageTransition } from "../page-transition";
+import { FadeInUp, StaggerContainer } from "../components/animated";
 
 export const metadata = {
   title: "Services",
@@ -23,16 +24,21 @@ export default function ServicesPage() {
             We help teams design, build, and launch software that drives
             outcomes.
           </p>
-          <div className="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+          <StaggerContainer
+            amount={0.5}
+            className="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-3"
+          >
             {services.map((s) => (
-              <Card key={s.title} className="bg-card/70 backdrop-blur">
-                <CardHeader>
-                  <CardTitle className="text-base">{s.title}</CardTitle>
-                  <CardDescription>{s.description}</CardDescription>
-                </CardHeader>
-              </Card>
+              <FadeInUp key={s.description}>
+                <Card className="bg-card/70 backdrop-blur">
+                  <CardHeader>
+                    <CardTitle className="text-base">{s.title}</CardTitle>
+                    <CardDescription>{s.description}</CardDescription>
+                  </CardHeader>
+                </Card>
+              </FadeInUp>
             ))}
-          </div>
+          </StaggerContainer>
         </div>
       </div>
     </PageTransition>

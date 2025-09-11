@@ -8,6 +8,7 @@ import {
   CardContent,
 } from "@/components/ui/card";
 import { PageTransition } from "../page-transition";
+import Image from "next/image";
 
 export const metadata = { title: "Work" };
 
@@ -28,6 +29,18 @@ export default function WorkPage() {
                 key={c.slug}
                 className="group hover:shadow-sm transition-shadow bg-card/70 backdrop-blur"
               >
+                {c.image && (
+                  <div className="mb-2 rounded-lg overflow-hidden border border-border bg-muted/40">
+                    <Image
+                      src={c.image}
+                      alt={c.title}
+                      height={500}
+                      width={500}
+                      className="w-full h-40 object-cover"
+                      loading="lazy"
+                    />
+                  </div>
+                )}
                 <CardHeader>
                   <div className="flex items-start justify-between gap-4">
                     <CardTitle className="text-lg group-hover:underline underline-offset-4">
@@ -38,6 +51,16 @@ export default function WorkPage() {
                     </span>
                   </div>
                   <CardDescription>{c.summary}</CardDescription>
+                  {c.url && (
+                    <Link
+                      href={c.url}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-primary underline text-sm mt-2 inline-block"
+                    >
+                      Visit Project
+                    </Link>
+                  )}
                 </CardHeader>
                 <CardContent>
                   <ul className="text-sm text-muted-foreground list-disc pl-5">
