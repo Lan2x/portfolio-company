@@ -1,11 +1,7 @@
 import Image from "next/image";
-import { Button } from "@/components/ui/button";
-import { Input } from "@/components/ui/input";
-import { Textarea } from "@/components/ui/textarea";
-import { Label } from "@/components/ui/label";
+
 import { PageTransition } from "../page-transition";
 import ContactForm from "./contact-form";
-import { sendEmail } from "../actions/send-email";
 
 export const metadata = { title: "Contact" };
 

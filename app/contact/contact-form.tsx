@@ -4,12 +4,22 @@ import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Label } from "@radix-ui/react-label";
 import { sendEmail } from "../actions/send-email";
-import { useActionState } from "react";
+import { useActionState, useEffect } from "react";
+import { toast } from "sonner";
 
 const initialState = { success: false, error: "" };
 
 export default function ContactForm() {
   const [state, formAction, pending] = useActionState(sendEmail, initialState);
+
+  useEffect(() => {
+    if (state.success) {
+      toast.success("Message sent successfully!");
+      state.success = false; // reset success state after showing toast
+    } else {
+      toast.error(state.error);
+    }
+  }, [state]);
 
   return (
     <form
@@ -52,7 +62,7 @@ export default function ContactForm() {
           className="mt-1"
         />
       </div>
-      {state?.error && <p aria-live="polite">{state.error}</p>}
+
       <Button
         type="submit"
         className="w-full mt-2 cursor-pointer"

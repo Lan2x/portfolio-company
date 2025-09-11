@@ -5,6 +5,7 @@ import "./globals.css";
 import { Header } from "./components/header";
 import { Footer } from "./components/footer";
 import { siteConfig } from "@/lib/site";
+import { Toaster } from "@/components/ui/sonner";
 
 const pretendard = localFont({
   variable: "--font-geist-sans",
@@ -43,6 +44,7 @@ export default function RootLayout({
       >
         <Header />
         <main className="min-h-[70vh]">{children}</main>
+        <Toaster />
         <Footer />
       </body>
     </html>
