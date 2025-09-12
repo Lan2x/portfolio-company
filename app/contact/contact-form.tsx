@@ -13,13 +13,14 @@ export default function ContactForm() {
   const [state, formAction, pending] = useActionState(sendEmail, initialState);
 
   useEffect(() => {
+    if (pending) return; // do nothing if still pending
     if (state.success) {
       toast.success("Message sent successfully!");
       state.success = false; // reset success state after showing toast
     } else {
       toast.error(state.error);
     }
-  }, [state]);
+  }, [state, pending]);
 
   return (
     <form

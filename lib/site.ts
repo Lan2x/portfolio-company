@@ -8,6 +8,7 @@ export const siteConfig = {
   description:
     "A 3‑developer consultancy building custom web and mobile software that ships fast and scales.",
   contactEmail: "hello@example.com",
+  url: "https://portfolio-company-eta.vercel.app",
   nav: [
     { href: "/services", label: "Services" },
     { href: "/work", label: "Work" },
