@@ -4,28 +4,29 @@ import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Label } from "@radix-ui/react-label";
 import { sendEmail } from "../actions/send-email";
-import { useActionState, useEffect } from "react";
 import { toast } from "sonner";
-
-const initialState = { success: false, error: "" };
+import { FormEvent, useState } from "react";
 
 export default function ContactForm() {
-  const [state, formAction, pending] = useActionState(sendEmail, initialState);
+  const [pending, setPending] = useState(false);
 
-  useEffect(() => {
-    if (pending) return; // do nothing if still pending
-    if (state.success) {
-      toast.success("Message sent successfully!");
-      state.success = false; // reset success state after showing toast
+  const handleSubmit = async (event: FormEvent<HTMLFormElement>) => {
+    event.preventDefault();
+    const formData = new FormData(event.currentTarget);
+    setPending(true);
+    const res = await sendEmail(formData);
+    if (res.success) {
+      toast.success("Email sent successfully!");
     } else {
-      toast.error(state.error);
+      toast.error(res.error);
     }
-  }, [state, pending]);
+    setPending(false);
+  };
 
   return (
     <form
       className="space-y-6 bg-card/80 rounded-lg p-6 border shadow flex flex-col flex-1"
-      action={formAction}
+      onSubmit={handleSubmit}
     >
       <div>
         <Label htmlFor="email">Your Email</Label>
