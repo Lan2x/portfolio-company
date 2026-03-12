@@ -82,20 +82,20 @@ export const team = [
     links: { linkedin: "#", github: "https://github.com/Lan2x" },
     image: "/team/reynaldo.jpg",
   },
-  {
-    name: "Kizzelyn Cruz",
-    role: "Frontend Engineer",
-    bio: "Specializes in building beautiful, accessible user interfaces and seamless user experiences for modern web apps.",
-    links: { linkedin: "#", github: "#" },
-    image: "/team/kizzelyn.png",
-  },
-  {
-    name: "Joveth Dela Cruz",
-    role: "Backend Engineer",
-    bio: "Expert in scalable backend systems, API design, and cloud infrastructure, ensuring reliability and performance.",
-    links: { linkedin: "#", github: "#" },
-    image: "/team/joveth.png",
-  },
+  // {
+  //   name: "Kizzelyn Cruz",
+  //   role: "Frontend Engineer",
+  //   bio: "Specializes in building beautiful, accessible user interfaces and seamless user experiences for modern web apps.",
+  //   links: { linkedin: "#", github: "#" },
+  //   image: "/team/kizzelyn.png",
+  // },
+  // {
+  //   name: "Joveth Dela Cruz",
+  //   role: "Backend Engineer",
+  //   bio: "Expert in scalable backend systems, API design, and cloud infrastructure, ensuring reliability and performance.",
+  //   links: { linkedin: "#", github: "#" },
+  //   image: "/team/joveth.png",
+  // },
 ] as const;
 
 export const pricingTiers = [

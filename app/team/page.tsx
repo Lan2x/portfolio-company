@@ -12,10 +12,9 @@ export default function TeamPage() {
           <h1 className="text-3xl md:text-4xl font-semibold tracking-tight">
             Team
           </h1>
-          <p className="mt-3 text-muted-foreground max-w-2xl">
-            Three senior developers, one aligned mission: ship impactful
-            software.
-          </p>
+          {/* <p className="mt-3 text-muted-foreground max-w-2xl">
+            senior developer, aligned mission: ship impactful software.
+          </p> */}
           <div className="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
             {team.map((m) => (
               <div
