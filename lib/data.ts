@@ -42,26 +42,6 @@ export type CaseStudy = {
 };
 
 export const caseStudies: CaseStudy[] = [
-  // {
-  //   slug: "ops-dashboard",
-  //   title: "Operations Dashboard",
-  //   summary:
-  //     "Unified real‑time insights across tools, improving decisions and reducing noise.",
-  //   results: [
-  //     "-35% time to insight",
-  //     "+25% team productivity",
-  //     "NPS +18 after launch",
-  //   ],
-  //   tags: ["Next.js", "Tailwind", "Analytics"],
-  // },
-  // {
-  //   slug: "ecommerce-modernization",
-  //   title: "E‑commerce Modernization",
-  //   summary:
-  //     "Replatformed storefront and admin, cutting page loads to under 1s globally.",
-  //   results: ["+22% conversion", "Core Web Vitals: all green"],
-  //   tags: ["Next.js", "Edge", "SEO"],
-  // },
   {
     slug: "chia",
     title: "Chia – Dental Clinic Reservation Management System",
@@ -76,6 +56,21 @@ export const caseStudies: CaseStudy[] = [
     tags: ["SaaS", "Next.js", "Healthcare"],
     url: "https://chia.ai.kr/",
     image: "/work/chia.png",
+  },
+  {
+    slug: "chia-mobile",
+    title: "Chia Mobile – Patient & Dentist Companion App",
+    summary:
+      "Cross-platform mobile application for real-time appointment tracking, push notifications, and instant patient-dentist communication.",
+    results: [
+      "Real-time push notifications for appointment changes",
+      "Secure biometric login for patient data privacy",
+      "Simplified mobile booking interface for patients",
+      "Optimized offline access for clinic staff schedules",
+    ],
+    tags: ["Mobile", "React Native", "Healthcare", "iOS & Android"],
+    url: "https://play.google.com/store/apps/details?id=com.anonymous.chia", // Placeholder URL
+    image: "/work/chia-mobile.webp",
   },
 ] as const;
 
