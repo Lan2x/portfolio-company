@@ -72,6 +72,37 @@ export const caseStudies: CaseStudy[] = [
     url: "https://play.google.com/store/apps/details?id=com.anonymous.chia", // Placeholder URL
     image: "/work/chia-mobile.webp",
   },
+  {
+    slug: "grade-access",
+    title: "University Management & Grading System",
+    summary:
+      "A comprehensive school management portal built with Laravel and React (Inertia.js) to handle student records, grading, and administrative workflows.",
+    results: [
+      "Automated grade calculation and transcript generation",
+      "Robust RBAC (Role-Based Access Control) for faculty and students",
+      "Secure scholarship management and exam result processing",
+      "Highly optimized database architecture for rapid data retrieval",
+      "DEAN USER: dean@email.com / password",
+    ],
+    tags: ["Web", "Laravel", "React", "MySQL"],
+    url: "https://reynaldo-dev.site",
+    image: "/work/cdln-management.png",
+  },
+  {
+    slug: "citizen-connect",
+    title: "Citizen Connect – LGU Smart Municipality App",
+    summary:
+      "A comprehensive public service mobile application designed for the municipality of Mondragon to bridge the gap between citizens and local government units.",
+    results: [
+      "Integrated emergency SOS and geo-tagged incident reporting",
+      "Digitized PWD & Solo Parent ID application with real-time tracking",
+      "Transparent SK youth program management and OSY support tracking",
+      "Dynamic LGU announcements and community resource management",
+    ],
+    tags: ["Mobile", "Flutter", "Laravel", "Public Service"],
+    url: "https://reynaldo-dev.site/dangup/index.html", // Update with your repository or demo link
+    image: "/work/lgu-mondragon.png",
+  },
 ] as const;
 
 export const team = [

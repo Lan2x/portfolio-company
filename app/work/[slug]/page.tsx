@@ -17,12 +17,13 @@ export async function generateMetadata({
   return { title: `${item.title}` };
 }
 
-export default function CaseStudyPage({
+export default async function CaseStudyPage({
   params,
 }: {
   params: { slug: string };
 }) {
-  const item = caseStudies.find((c) => c.slug === params.slug);
+  const { slug } = params;
+  const item = caseStudies.find((c) => c.slug === slug);
   if (!item) notFound();
 
   return (
