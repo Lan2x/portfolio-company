@@ -1,6 +1,8 @@
 import { notFound } from "next/navigation";
 import { caseStudies } from "@/lib/data";
 import { Metadata } from "next";
+import Link from "next/link";
+import { ArrowLeft } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 export async function generateStaticParams() {
@@ -29,6 +31,12 @@ export default async function CaseStudyPage({
   return (
     <div className="py-16 md:py-24">
       <div className="mx-auto w-full max-w-3xl px-4 sm:px-6 lg:px-8">
+        <Button asChild variant="ghost" size="sm" className="mb-6 -ml-3 text-primary hover:bg-primary/10 hover:text-primary dark:hover:bg-primary/10">
+          <Link href="/work">
+            <ArrowLeft />
+            Back to Work
+          </Link>
+        </Button>
         <h1 className="text-3xl md:text-4xl font-semibold tracking-tight">
           {item.title}
         </h1>
