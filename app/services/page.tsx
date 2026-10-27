@@ -21,7 +21,7 @@ export default function ServicesPage() {
             Services
           </h1>
           <p className="mt-3 text-muted-foreground max-w-2xl">
-            We help teams design, build, and launch software that drives
+            I help teams design, build, and launch software that drives
             outcomes.
           </p>
           <StaggerContainer

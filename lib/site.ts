@@ -4,10 +4,10 @@ export type NavLink = {
 };
 
 export const siteConfig = {
-  name: "Ren Software Studio",
+  name: "Reynaldo Castante",
   description:
-    "A 3‑developer consultancy building custom web and mobile software that ships fast and scales.",
-  contactEmail: "hello@example.com",
+    "Freelance full‑stack developer building custom web and mobile software that ships fast and scales.",
+  contactEmail: "castantereynaldo@gmail.com",
   url: "https://portfolio-company-eta.vercel.app",
   nav: [
     { href: "/services", label: "Services" },
@@ -15,14 +15,11 @@ export const siteConfig = {
     { href: "/process", label: "Process" },
     { href: "/pricing", label: "Pricing" },
     { href: "/about", label: "About" },
-    { href: "/team", label: "Team" },
-    { href: "/careers", label: "Careers" },
     { href: "/contact", label: "Contact" },
   ] as NavLink[],
   social: {
-    github: "https://github.com/your-org",
-    linkedin: "https://www.linkedin.com/company/your-company",
-    email: "mailto:hello@example.com",
+    github: "https://github.com/Lan2x",
+    email: "mailto:castantereynaldo@gmail.com",
   },
 } as const;
 

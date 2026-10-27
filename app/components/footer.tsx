@@ -14,9 +14,9 @@ export function Footer() {
           </p>
         </div>
         <div>
-          <div className="text-sm font-medium mb-3">Company</div>
+          <div className="text-sm font-medium mb-3">Pages</div>
           <ul className="space-y-2 text-sm">
-            {siteConfig.nav.slice(0, 6).map((i) => (
+            {siteConfig.nav.map((i) => (
               <li key={i.href}>
                 <Link
                   className="text-muted-foreground hover:text-foreground"
@@ -37,14 +37,6 @@ export function Footer() {
                 href={siteConfig.social.email}
               >
                 {siteConfig.contactEmail}
-              </a>
-            </li>
-            <li>
-              <a
-                className="text-muted-foreground hover:text-foreground"
-                href={siteConfig.social.linkedin}
-              >
-                LinkedIn
               </a>
             </li>
             <li>

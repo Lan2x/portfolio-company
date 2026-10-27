@@ -14,10 +14,10 @@ export default function ContactPage() {
             {/* Left: Contact form */}
             <div className="flex flex-col h-full justify-center">
               <h1 className="text-3xl md:text-4xl font-semibold tracking-tight mb-2 ">
-                Contact Us
+                Get in touch
               </h1>
               <p className="mb-8 text-muted-foreground">
-                We&apos;d love to hear from you.
+                Tell me about your project and I&apos;ll get back to you.
               </p>
               <ContactForm />
             </div>

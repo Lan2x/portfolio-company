@@ -21,7 +21,7 @@ export default function WorkPage() {
             Case Studies
           </h1>
           <p className="mt-3 text-muted-foreground max-w-2xl">
-            A selection of projects and outcomes.
+            A selection of projects I’ve built and their outcomes.
           </p>
           <div className="mt-10 grid gap-6 md:grid-cols-2">
             {caseStudies.map((c) => (

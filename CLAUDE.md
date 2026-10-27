@@ -4,7 +4,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## What this is
 
-Marketing site for "Ren Software Studio", a small software consultancy: services, case studies, process, pricing, team, and a contact form that captures leads. Deployed on Vercel (`siteConfig.url` in `lib/site.ts`).
+Freelance portfolio site for Reynaldo Castante (formerly the "Ren Software Studio" team site, now one person, so copy is first person): services, case studies, process, pricing, about, and a contact form that captures leads. Deployed on Vercel (`siteConfig.url` in `lib/site.ts`).
 
 ## Commands
 
@@ -16,10 +16,11 @@ Marketing site for "Ren Software Studio", a small software consultancy: services
 ## Architecture
 
 - **Next.js 15 App Router, React 19, TypeScript strict, Tailwind CSS 4.** Imports use the `@/*` alias for the repo root.
-- **Content is data-driven, not hardcoded in pages.** Site-wide constants (name, nav links, contact email, socials, URL) live in `lib/site.ts`. Page content (services, `caseStudies`, team, pricing tiers, process steps, posts) lives in `lib/data.ts`. Pages import these arrays and `.map()` over them. To add a case study, append to `caseStudies` and put its image in `public/work/`. `app/work/[slug]/page.tsx` generates the route statically through `generateStaticParams`.
+- **Content is data-driven, not hardcoded in pages.** Site-wide constants (name, nav links, contact email, socials, URL) live in `lib/site.ts`. Page content (services, `caseStudies`, process steps) lives in `lib/data.ts`. Pages import these arrays and `.map()` over them. To add a case study, append to `caseStudies` and put its image in `public/work/`. `app/work/[slug]/page.tsx` generates the route statically through `generateStaticParams`.
 - **Two component folders:**
   - `components/ui/` holds shadcn/ui primitives (config in `components.json`). Add new ones with `npx shadcn@latest add <name>`.
   - `app/components/` holds site components (header, footer, container, section) and the framer-motion wrappers `Appear` and `Animated`, which are client components.
+- **Page transitions:** most route pages wrap their content in `PageTransition` from `app/page-transition.tsx`, a client `AnimatePresence` keyed on the pathname. It is applied per page, not in the layout, so new pages need to add it themselves.
 - **Contact form backend:** `app/contact/contact-form.tsx` (client, react-hook-form, sonner toasts) calls the server action `app/actions/send-email.ts`. That action sends the message through Gmail SMTP with nodemailer. It needs the env vars `GOOGLE_EMAIL` and `GOOGLE_APP_PASSWORD` (`.env*` files are gitignored).
 - **Fonts:** Pretendard is loaded locally from `node_modules` but assigned to the `--font-geist-sans` variable. Geist Mono is assigned to `--font-geist-mono`. Both are set up in `app/layout.tsx`.
 

@@ -14,13 +14,18 @@ export default function ContactForm() {
     event.preventDefault();
     const formData = new FormData(event.currentTarget);
     setPending(true);
-    const res = await sendEmail(formData);
-    if (res.success) {
-      toast.success("Email sent successfully!");
-    } else {
-      toast.error(res.error);
+    try {
+      const res = await sendEmail(formData);
+      if (res.success) {
+        toast.success("Email sent successfully!");
+      } else {
+        toast.error(res.error);
+      }
+    } catch {
+      toast.error("Couldn't send your message. Please try again later.");
+    } finally {
+      setPending(false);
     }
-    setPending(false);
   };
 
   return (
@@ -60,7 +65,7 @@ export default function ContactForm() {
           name="message"
           required
           rows={5}
-          placeholder="How can we help you?"
+          placeholder="How can I help you?"
           className="mt-1"
         />
       </div>

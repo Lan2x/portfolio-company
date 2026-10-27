@@ -6,7 +6,6 @@ import { Button } from "@/components/ui/button";
 import { usePathname } from "next/navigation";
 import { cn } from "@/lib/utils";
 import { motion } from "framer-motion";
-import Image from "next/image";
 
 export function Header() {
   const pathname = usePathname();
@@ -14,7 +13,7 @@ export function Header() {
     <header className="sticky top-0 z-40 w-full border-b bg-background/80 backdrop-blur supports-[backdrop-filter]:bg-background/60">
       <Container className="flex h-16 items-center justify-between gap-6">
         <Link href="/" className="font-semibold tracking-tight">
-          <Image height={160} width={160} src={"/logo.png"} alt="Logo" />
+          {siteConfig.name}
         </Link>
         <nav className="hidden md:flex items-center gap-6 text-sm">
           {siteConfig.nav.map((item) => {

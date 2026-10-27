@@ -26,7 +26,7 @@ export default function Home() {
             <Appear>
               <div>
                 <h1 className="text-3xl md:text-5xl font-semibold tracking-tight bg-clip-text text-transparent bg-gradient-to-b from-foreground to-foreground/70">
-                  Senior product engineers building software that moves the
+                  Hi, I&apos;m Reynaldo. I build software that moves the
                   needle
                 </h1>
                 <p className="mt-4 text-muted-foreground text-base md:text-lg">
@@ -37,7 +37,7 @@ export default function Home() {
                     <Link href="/contact">Start a project</Link>
                   </Button>
                   <Button asChild variant="outline">
-                    <Link href="/work">See our work</Link>
+                    <Link href="/work">See my work</Link>
                   </Button>
                 </div>
               </div>
@@ -49,12 +49,12 @@ export default function Home() {
                   aria-hidden
                 />
                 <Image
-                  src="/hero-team.png"
-                  alt="Our team designing and building modern software products"
-                  width={640}
-                  height={480}
+                  src="/reynaldo.jpg"
+                  alt="Portrait of Reynaldo Castante"
+                  width={480}
+                  height={620}
                   priority
-                  className="w-full h-auto rounded-xl border border-border shadow-sm object-cover"
+                  className="w-full max-w-sm h-auto rounded-xl border border-border shadow-sm object-cover"
                 />
               </div>
             </Appear>
@@ -64,7 +64,7 @@ export default function Home() {
 
       {/* What we do */}
       <Section
-        title="What we do"
+        title="What I do"
         subtitle="Full‑stack product engineering from idea to launch and beyond."
       >
         <StaggerContainer

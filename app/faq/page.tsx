@@ -3,7 +3,7 @@ export const metadata = { title: "FAQ" };
 const faqs = [
   {
     q: "How do we start?",
-    a: "Send us a note about your goals. We’ll set up a short call to align and propose next steps.",
+    a: "Send me a note about your goals. I’ll set up a short call to align and propose next steps.",
   },
   {
     q: "What’s your typical timeline?",
@@ -11,7 +11,7 @@ const faqs = [
   },
   {
     q: "Do you work fixed-bid?",
-    a: "We prefer time & materials with clear milestones. Fixed-bid on well-defined scopes is possible.",
+    a: "I prefer time & materials with clear milestones. Fixed-bid on well-defined scopes is possible.",
   },
 ];
 

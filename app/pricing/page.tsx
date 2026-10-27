@@ -11,21 +11,21 @@ export default function PricingPage() {
             Pricing
           </h1>
           <p className="mt-3 text-muted-foreground max-w-2xl">
-            We offer{" "}
+            I offer{" "}
             <span className="font-semibold text-primary">
               per-project pricing
             </span>{" "}
             based on the size and complexity of your software needs. This
             ensures transparency and flexibility for every client.
           </p>
-          <div className="mt-10 grid gap-6 md:grid-cols-3">
+          <div className="mt-10 grid gap-6 md:grid-cols-2 max-w-4xl">
             {/* Starter */}
             <div className="rounded-xl border bg-card/80 p-6 shadow-sm flex flex-col">
               <div className="font-semibold text-lg text-primary mb-1">
                 Starter
               </div>
               <div className="text-2xl font-bold text-foreground mb-2">
-                ₱150,000
+                ₱20,000
                 <span className="text-base font-normal text-muted-foreground">
                   +
                 </span>
@@ -45,7 +45,7 @@ export default function PricingPage() {
                 Growth
               </div>
               <div className="text-2xl font-bold text-foreground mb-2">
-                ₱300,000
+                ₱80,000
                 <span className="text-base font-normal text-muted-foreground">
                   +
                 </span>
@@ -58,27 +58,6 @@ export default function PricingPage() {
                 <li>Development &amp; launch</li>
                 <li>Integrations</li>
                 <li>Basic support</li>
-              </ul>
-            </div>
-            {/* Enterprise */}
-            <div className="rounded-xl border bg-card/80 p-6 shadow-sm flex flex-col">
-              <div className="font-semibold text-lg text-primary mb-1">
-                Enterprise
-              </div>
-              <div className="text-2xl font-bold text-foreground mb-2">
-                ₱1,200,000
-                <span className="text-base font-normal text-muted-foreground">
-                  +
-                </span>
-              </div>
-              <div className="text-sm text-muted-foreground mb-4">
-                Complex systems, SaaS, ongoing support
-              </div>
-              <ul className="flex-1 space-y-2 text-sm text-muted-foreground mb-4">
-                <li>Consultation &amp; design</li>
-                <li>Development &amp; launch</li>
-                <li>Integrations</li>
-                <li>Ongoing support</li>
               </ul>
             </div>
           </div>
@@ -98,7 +77,7 @@ export default function PricingPage() {
                 href="/contact"
                 className="text-primary underline underline-offset-4"
               >
-                contact us
+                contact me
               </a>{" "}
               with your project details!
             </p>

@@ -13,7 +13,7 @@ export default function ProcessPage() {
             Process
           </h1>
           <p className="text-muted-foreground mb-8 max-w-2xl">
-            Here’s how we work with you from idea to launch and beyond.
+            Here’s how I work with you from idea to launch and beyond.
           </p>
           <StaggerContainer
             amount={0.5}

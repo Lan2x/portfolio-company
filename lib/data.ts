@@ -119,56 +119,6 @@ export const caseStudies: CaseStudy[] = [
   },
 ] as const;
 
-export const team = [
-  {
-    name: "Reynaldo Castante",
-    role: "Founding Engineer",
-    bio: "Full‑stack engineer focused on DX and shipping fast with quality.",
-    links: { linkedin: "#", github: "https://github.com/Lan2x" },
-    image: "/team/reynaldo.jpg",
-  },
-  // {
-  //   name: "Kizzelyn Cruz",
-  //   role: "Frontend Engineer",
-  //   bio: "Specializes in building beautiful, accessible user interfaces and seamless user experiences for modern web apps.",
-  //   links: { linkedin: "#", github: "#" },
-  //   image: "/team/kizzelyn.png",
-  // },
-  // {
-  //   name: "Joveth Dela Cruz",
-  //   role: "Backend Engineer",
-  //   bio: "Expert in scalable backend systems, API design, and cloud infrastructure, ensuring reliability and performance.",
-  //   links: { linkedin: "#", github: "#" },
-  //   image: "/team/joveth.png",
-  // },
-] as const;
-
-export const pricingTiers = [
-  {
-    name: "Sprint",
-    priceText: "From $5k",
-    features: [
-      "1–2 week engagement",
-      "Discovery or prototype",
-      "Senior engineer(s) only",
-    ],
-  },
-  {
-    name: "Build",
-    priceText: "From $12k/mo",
-    features: [
-      "Dedicated pod (part‑time)",
-      "Design + engineering",
-      "Weekly demos",
-    ],
-  },
-  {
-    name: "Scale",
-    priceText: "Custom",
-    features: ["Performance, platform, migrations", "SLAs available"],
-  },
-] as const;
-
 export const processSteps = [
   {
     title: "Discovery",
@@ -179,21 +129,10 @@ export const processSteps = [
     title: "Design",
     description: "Flows, UI, and architecture to de‑risk build.",
   },
-  { title: "Build", description: "Iterate in small slices with weekly demos." },
+  { title: "Build", description: "I build in small slices and demo every week." },
   {
     title: "Launch",
     description: "Staged rollouts, observability, and polish.",
   },
   { title: "Support", description: "Measure, iterate, and expand impact." },
-] as const;
-
-export const posts = [
-  {
-    slug: "why-small-teams-ship-faster",
-    title: "Why small senior teams ship faster",
-    excerpt: "Focus, clarity, and ownership beat headcount.",
-    date: "2025-07-01",
-    content:
-      "We believe small, senior teams with clear goals ship faster and with fewer surprises. Here’s how we approach projects…",
-  },
 ] as const;
